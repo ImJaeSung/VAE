@@ -6,7 +6,7 @@
 - 각 datapoint가 연속형 잠재 변수를 가지는 i.i.d 데이터셋에 대하여, 제안된 lower bound estimator를 사용하여 계산이 불가능한 사후분포를 적합시킴으로써 효율적인 사후추론이 가능해졌다.
 
 \begin{aligned} 
-log p_{\theta}(x^{(i)})&=E_{z \sim q_{\phi}(z|x^{(i)})}[logp_{\theta}(x^{(i)})] \\
+log p_{\theta}(x^{(i)})=E_{z \sim q_{\phi}(z|x^{(i)})}[logp_{\theta}(x^{(i)})] \\
 =E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})}\bigg] \\
 =E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\bigg] \\
 =E_{z \sim q_{\phi}(z|x^{(i)})}[logp_{\theta}(x^{(i)}|z)] - E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[log\cfrac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}\bigg]+E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[log\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}\bigg] \\
