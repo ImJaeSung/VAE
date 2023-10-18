@@ -5,7 +5,8 @@
 - Variational lower bound의 Reparmeterization이 일반적인 Gradient 방법론들을 사용하여 직접적으로 최적화 될 수 있는 lower bound estimator를 만든다.
 - 각 datapoint가 연속형 잠재 변수를 가지는 i.i.d 데이터셋에 대하여, 제안된 lower bound estimator를 사용하여 계산이 불가능한 사후분포를 적합시킴으로써 효율적인 사후추론이 가능해졌다.
 
-- Lower Bound (ELBO) 
+- Lower Bound (ELBO)
+
 $$\begin{aligned} 
 log p_{\theta}(x^{(i)})&=E_{z \sim q_{\phi}(z|x^{(i)})}[logp_{\theta}(x^{(i)})] \\
 &=E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})}\bigg] \\
