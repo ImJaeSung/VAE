@@ -8,11 +8,11 @@
 - Lower Bound (ELBO)
 
 $$\begin{aligned} 
-\log p_{\theta}(x^{(i)})&=E_{z \sim q_{\phi}(z|x^{(i)})}[\logp_{\theta}(x^{(i)})] \\
+\log p_{\theta}(x^{(i)})&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)})] \\
 &=E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})}\bigg] \\
 &=E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\bigg] \\
-&=E_{z \sim q_{\phi}(z|x^{(i)})}[\logp_{\theta}(x^{(i)}|z)] - E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\cfrac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}\bigg]+E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}\bigg] \\
-&=E_{z \sim q_{\phi}(z|x^{(i)})}[\logp_{\theta}(x^{(i)}|z)]-\int_{z} q_{\phi}(z|x^{(i)})log \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}dz + \int_{z} q_{\phi}(z|x^{(i)})\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}dz\\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)] - E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\cfrac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}\bigg]+E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}\bigg] \\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)]-\int_{z} q_{\phi}(z|x^{(i)})log \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}dz + \int_{z} q_{\phi}(z|x^{(i)})\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}dz\\
 &=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)]-D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z))+D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))\\
 &=L(\theta, \phi : x^{(i)}) + D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))
 \end{aligned}$$
