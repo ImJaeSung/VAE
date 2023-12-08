@@ -1,0 +1,39 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.18",
+    "heartbeatAt": "2023-10-17T12:00:29.096834",
+    "startedAt": "2023-10-17T12:00:26.089446",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\LimJaeSung\\OneDrive - UOS\\\ubc14\ud0d5 \ud654\uba74\\\uc778\ud134 \uacf5\ubd80\\VAE\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "Jaeseooooooong",
+    "username": "LimJaeSung",
+    "executable": "c:\\Users\\LimJaeSung\\anaconda3\\envs\\intern\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1783.0,
+        "min": 0.0,
+        "max": 2301.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1783.0,
+            "min": 0.0,
+            "max": 2301.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 351.2533531188965,
+            "used": 207.03948211669922
+        }
+    },
+    "memory": {
+        "total": 15.383598327636719
+    }
+}

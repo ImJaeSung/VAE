@@ -1,0 +1,1 @@
+{"pred": {"_type": "image-file", "sha256": "23b43ef428fbd5a9d9b21bfe37b9ad9908f87fe3f0fe5ce324c39e82ddc57d8f", "size": 218334, "path": "media/images/pred_0_23b43ef428fbd5a9d9b2.png", "format": "png", "width": 1000, "height": 1000}, "_timestamp": 1697524725.3386247, "_runtime": 3.3795788288116455, "_step": 0, "_wandb": {"runtime": 1}}

@@ -1,0 +1,718 @@
+2023-10-17 21:00:26,118 INFO    StreamThr :28424 [internal.py:wandb_internal():86] W&B internal server running at pid: 28424, started at: 2023-10-17 21:00:26.116935
+2023-10-17 21:00:26,122 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status
+2023-10-17 21:00:26,152 INFO    WriterThread:28424 [datastore.py:open_for_write():85] open: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\run-soati9tq.wandb
+2023-10-17 21:00:26,153 DEBUG   SenderThread:28424 [sender.py:send():380] send: header
+2023-10-17 21:00:26,179 DEBUG   SenderThread:28424 [sender.py:send():380] send: run
+2023-10-17 21:00:27,668 INFO    SenderThread:28424 [dir_watcher.py:__init__():211] watching files in: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files
+2023-10-17 21:00:27,668 INFO    SenderThread:28424 [sender.py:_start_run_threads():1122] run started: soati9tq with start time 1697544026.116935
+2023-10-17 21:00:27,722 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: check_version
+2023-10-17 21:00:27,723 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: check_version
+2023-10-17 21:00:29,051 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: run_start
+2023-10-17 21:00:29,083 DEBUG   HandlerThread:28424 [system_info.py:__init__():32] System info init
+2023-10-17 21:00:29,084 DEBUG   HandlerThread:28424 [system_info.py:__init__():47] System info init done
+2023-10-17 21:00:29,084 INFO    HandlerThread:28424 [system_monitor.py:start():194] Starting system monitor
+2023-10-17 21:00:29,084 INFO    SystemMonitor:28424 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-10-17 21:00:29,084 INFO    HandlerThread:28424 [system_monitor.py:probe():214] Collecting system info
+2023-10-17 21:00:29,096 INFO    SystemMonitor:28424 [interfaces.py:start():190] Started cpu monitoring
+2023-10-17 21:00:29,096 DEBUG   HandlerThread:28424 [system_info.py:probe():196] Probing system
+2023-10-17 21:00:29,096 INFO    SystemMonitor:28424 [interfaces.py:start():190] Started disk monitoring
+2023-10-17 21:00:29,099 INFO    SystemMonitor:28424 [interfaces.py:start():190] Started memory monitoring
+2023-10-17 21:00:29,114 INFO    SystemMonitor:28424 [interfaces.py:start():190] Started network monitoring
+2023-10-17 21:00:29,140 DEBUG   HandlerThread:28424 [gitlib.py:_init_repo():53] git repository is invalid
+2023-10-17 21:00:29,140 DEBUG   HandlerThread:28424 [system_info.py:probe():244] Probing system done
+2023-10-17 21:00:29,140 DEBUG   HandlerThread:28424 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.9.18', 'heartbeatAt': '2023-10-17T12:00:29.096834', 'startedAt': '2023-10-17T12:00:26.089446', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\LimJaeSung\\OneDrive - UOS\\바탕 화면\\인턴 공부\\VAE\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'Jaeseooooooong', 'username': 'LimJaeSung', 'executable': 'c:\\Users\\LimJaeSung\\anaconda3\\envs\\intern\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 1783.0, 'min': 0.0, 'max': 2301.0}, 'cpu_freq_per_core': [{'current': 1783.0, 'min': 0.0, 'max': 2301.0}], 'disk': {'/': {'total': 351.2533531188965, 'used': 207.03948211669922}}, 'memory': {'total': 15.383598327636719}}
+2023-10-17 21:00:29,140 INFO    HandlerThread:28424 [system_monitor.py:probe():224] Finished collecting system info
+2023-10-17 21:00:29,140 INFO    HandlerThread:28424 [system_monitor.py:probe():227] Publishing system info
+2023-10-17 21:00:29,140 DEBUG   HandlerThread:28424 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-17 21:00:29,142 DEBUG   HandlerThread:28424 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-17 21:00:29,143 DEBUG   HandlerThread:28424 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-10-17 21:00:29,164 ERROR   HandlerThread:28424 [system_info.py:_save_conda():86] Error saving conda packages: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "c:\Users\LimJaeSung\anaconda3\envs\intern\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 82, in _save_conda
+    subprocess.call(
+  File "c:\Users\LimJaeSung\anaconda3\envs\intern\lib\subprocess.py", line 349, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "c:\Users\LimJaeSung\anaconda3\envs\intern\lib\subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "c:\Users\LimJaeSung\anaconda3\envs\intern\lib\subprocess.py", line 1436, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2023-10-17 21:00:29,165 DEBUG   HandlerThread:28424 [system_info.py:_save_conda():87] Saving conda packages done
+2023-10-17 21:00:29,167 INFO    HandlerThread:28424 [system_monitor.py:probe():229] Finished publishing system info
+2023-10-17 21:00:29,167 DEBUG   SenderThread:28424 [sender.py:send():380] send: files
+2023-10-17 21:00:29,168 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-17 21:00:29,201 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:00:29,201 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:00:29,206 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:00:29,692 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-metadata.json
+2023-10-17 21:00:29,692 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\requirements.txt
+2023-10-17 21:00:29,693 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\conda-environment.yaml
+2023-10-17 21:00:30,736 DEBUG   SenderThread:28424 [sender.py:send():380] send: telemetry
+2023-10-17 21:00:31,206 INFO    wandb-upload_0:28424 [upload_job.py:push():131] Uploaded file C:\Users\LIMJAE~1\AppData\Local\Temp\tmpsqpk6dc3wandb\yca0qtpx-wandb-metadata.json
+2023-10-17 21:00:31,697 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:00:31,743 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:33,712 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:00:36,777 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:41,797 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:44,194 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:00:44,211 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:00:44,212 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:00:47,446 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:53,013 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:53,340 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:00:53,341 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:00:53,341 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:00:53,342 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:00:53,924 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:00:53,924 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:00:54,936 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:00:55,954 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:00:58,400 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:00:58,985 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\config.yaml
+2023-10-17 21:00:59,201 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:00:59,232 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:00:59,233 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:01:04,572 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:09,610 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:14,205 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:01:14,235 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:01:14,236 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:01:15,303 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:17,195 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:01:17,658 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:01:17,660 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:01:17,660 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:01:17,661 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:01:18,210 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:01:19,223 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:01:20,704 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:25,728 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:29,132 DEBUG   SystemMonitor:28424 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-10-17 21:01:29,133 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:01:29,211 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:01:29,242 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:01:29,243 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:01:31,496 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:36,568 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:41,344 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:01:41,345 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:01:41,345 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:01:41,347 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:01:41,657 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:01:41,659 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:01:42,353 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:43,703 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:01:44,218 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:01:44,249 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:01:44,250 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:01:47,596 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:52,652 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:57,684 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:01:59,136 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:01:59,230 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:01:59,245 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:01:59,246 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:02:03,370 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:04,143 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:04,680 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:02:04,681 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:02:04,681 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:02:04,683 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:02:05,172 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:02:06,185 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:08,726 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:13,781 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:14,236 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:02:14,250 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:02:14,251 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:02:19,510 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:24,566 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:27,628 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:28,197 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:02:28,199 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:02:28,199 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:02:28,201 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:02:28,639 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:02:29,142 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:02:29,251 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:02:29,252 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:02:29,253 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:02:29,682 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:30,484 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:35,540 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:40,599 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:44,242 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:02:44,258 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:02:44,259 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:02:46,555 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:50,122 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:51,804 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:02:51,804 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:51,806 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:02:51,806 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:02:51,808 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:02:52,163 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:02:54,204 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:02:56,848 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:02:59,148 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:02:59,258 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:02:59,274 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:02:59,276 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:03:02,551 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:07,592 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:12,659 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:14,265 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:03:14,282 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:03:14,283 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:03:14,671 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:03:15,510 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:03:15,510 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:03:15,512 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:03:15,513 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:03:15,686 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:03:16,719 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:03:17,723 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:03:18,532 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:23,577 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:28,621 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:29,153 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:03:29,277 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:03:29,294 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:03:29,294 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:03:34,591 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:38,179 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:03:39,271 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:03:39,272 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:03:39,272 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:03:39,274 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:03:40,216 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:03:40,216 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:03:40,275 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:44,279 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:03:44,294 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:03:44,295 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:03:45,599 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:50,639 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:55,698 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:03:59,164 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:03:59,291 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:03:59,306 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:03:59,307 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:04:01,209 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:02,581 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:04:02,582 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:04:02,582 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:04:02,584 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:04:02,693 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:04:02,694 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:04,733 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:06,635 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:11,691 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:14,303 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:04:14,319 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:04:14,320 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:04:17,611 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:22,667 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:24,173 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:25,953 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:04:25,954 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:04:25,954 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:04:25,956 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:04:26,220 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:04:26,221 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:27,973 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:28,263 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:29,180 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:04:29,305 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:04:29,321 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:04:29,322 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:04:33,631 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:38,658 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:43,696 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:44,308 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:04:44,339 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:04:44,340 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:04:48,699 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:48,817 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:49,127 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:04:49,129 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:04:49,129 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:04:49,130 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:04:49,713 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:04:50,748 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:04:54,190 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:59,195 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:04:59,196 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:04:59,318 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:04:59,334 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:04:59,334 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:05:04,652 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:09,676 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:12,645 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:05:12,647 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:05:12,647 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:05:12,648 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:05:13,200 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:05:13,201 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:14,215 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:14,320 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:05:14,337 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:05:14,337 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:05:15,236 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:15,589 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:20,639 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:25,681 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:29,202 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:05:29,325 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:05:29,341 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:05:29,342 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:05:31,597 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:34,646 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:36,092 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:05:36,093 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:05:36,093 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:05:36,095 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:05:36,687 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:05:36,688 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:37,108 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:38,740 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:42,165 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:44,333 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:05:44,349 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:05:44,350 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:05:47,586 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:52,650 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:58,005 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:05:59,130 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:05:59,206 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:05:59,302 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:05:59,305 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:05:59,305 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:05:59,307 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:05:59,344 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:05:59,376 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:05:59,377 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:06:00,175 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:06:01,183 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:03,710 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:08,756 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:13,809 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:14,359 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:06:14,375 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:06:14,376 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:06:19,685 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:21,616 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:22,608 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:06:22,611 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:06:22,611 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:06:22,612 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:06:22,653 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:06:22,654 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:24,694 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:25,656 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:29,218 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:06:29,375 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:06:29,375 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:06:29,376 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:06:31,601 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:36,646 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:41,679 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:44,375 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:06:44,376 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:06:44,392 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:06:45,117 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:45,856 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:06:45,858 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:06:45,858 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:06:45,860 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:06:46,124 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:06:46,870 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:47,177 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:06:51,911 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:56,934 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:06:59,222 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:06:59,366 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:06:59,366 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:06:59,428 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:07:02,653 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:08,647 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:08,931 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:07:08,933 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:07:08,933 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:07:08,934 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:07:09,649 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:07:09,649 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:10,658 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:11,696 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:13,964 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:14,375 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:07:14,375 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:07:14,405 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:07:19,669 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:24,699 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:29,229 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:07:29,383 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:07:29,384 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:07:29,415 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:07:30,635 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:31,059 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:31,913 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:07:31,914 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:07:31,914 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:07:31,915 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:07:32,091 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:07:33,106 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:35,970 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:41,027 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:44,398 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:07:44,398 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:07:44,429 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:07:46,722 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:51,767 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:53,530 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:55,107 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:07:55,109 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:07:55,109 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:07:55,110 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:07:55,579 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:07:57,132 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:07:57,612 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:07:59,235 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:07:59,404 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:07:59,405 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:07:59,436 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:08:02,746 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:07,798 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:12,855 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:14,407 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:08:14,407 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:08:14,438 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:08:18,011 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:08:18,109 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:08:18,110 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:18,110 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:08:18,111 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:08:18,113 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:08:19,050 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:08:19,051 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:08:20,058 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:08:23,161 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:28,194 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:29,265 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:08:29,408 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:08:29,409 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:08:29,441 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:08:33,758 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:38,819 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:41,543 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:08:41,715 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:08:41,717 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:08:41,717 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:08:41,718 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:08:42,551 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:08:43,588 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:08:44,401 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:08:44,402 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:08:44,449 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:08:44,694 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:49,728 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:54,791 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:08:59,280 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:08:59,404 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:08:59,404 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:08:59,450 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:09:00,666 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:05,861 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:06,085 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:06,182 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:09:06,184 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:09:06,184 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:09:06,186 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:09:07,092 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:09:08,126 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:11,228 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:14,414 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:09:14,415 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:09:14,460 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:09:16,642 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:21,682 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:26,734 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:29,295 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:09:29,435 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:09:29,436 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:09:29,467 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:09:29,577 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:30,108 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:09:30,109 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:09:30,109 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:09:30,111 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:09:30,615 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:09:31,628 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:32,130 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:37,168 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:42,219 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:44,436 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:09:44,436 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:09:44,481 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:09:47,685 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:52,029 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:52,932 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:53,226 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:09:53,227 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:09:53,228 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:09:53,229 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:09:54,063 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:09:54,063 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:56,117 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:09:58,272 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:09:59,300 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:09:59,428 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:09:59,428 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:09:59,490 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:10:03,779 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:08,834 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:13,884 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:14,446 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:10:14,447 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:10:14,494 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:10:16,564 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:10:16,920 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:10:16,923 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:10:16,923 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:10:16,925 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:10:17,600 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:10:17,601 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:10:18,613 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:10:18,953 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:24,013 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:29,061 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:29,311 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:10:29,450 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:10:29,451 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:10:29,497 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:10:34,782 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:40,063 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:10:40,329 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:41,638 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:10:41,641 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:10:41,641 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:10:41,642 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:10:42,094 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:10:44,137 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:10:44,458 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:10:44,459 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:10:44,506 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:10:45,672 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:50,711 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:55,765 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:10:59,326 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:10:59,481 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:10:59,482 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:10:59,512 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:11:00,793 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:04,547 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:04,783 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:11:04,790 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:11:04,790 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:11:04,791 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:11:05,559 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:11:05,794 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:06,593 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:10,843 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:14,486 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:11:14,487 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:11:14,518 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:11:16,786 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:21,887 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:27,848 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:28,155 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:11:28,156 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:11:28,156 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:11:28,159 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:11:29,057 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:11:29,059 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:29,338 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:11:29,492 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:11:29,493 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:11:29,509 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:11:30,074 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:33,777 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:38,818 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:43,874 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:44,499 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:11:44,499 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:11:44,515 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:11:49,176 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:50,538 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:51,490 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:11:51,492 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:11:51,492 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:11:51,494 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:11:51,565 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:11:52,580 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:11:54,522 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:11:59,345 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:11:59,504 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:11:59,504 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:11:59,519 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:11:59,789 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:12:04,844 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:12:09,915 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:12:14,524 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:12:14,524 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-17 21:12:14,525 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: stop_status
+2023-10-17 21:12:14,779 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:12:14,847 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:12:14,847 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:12:14,849 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:12:15,063 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:12:15,063 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:12:15,852 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:12:16,141 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:12:17,150 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:12:19,180 DEBUG   SenderThread:28424 [sender.py:send():380] send: files
+2023-10-17 21:12:19,180 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file media\images\pred_30_d002612df612e3fb6a52.png with policy now
+2023-10-17 21:12:19,181 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: partial_history
+2023-10-17 21:12:19,185 DEBUG   SenderThread:28424 [sender.py:send():380] send: history
+2023-10-17 21:12:19,185 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: summary_record
+2023-10-17 21:12:19,186 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:12:19,187 DEBUG   SenderThread:28424 [sender.py:send():380] send: telemetry
+2023-10-17 21:12:19,188 DEBUG   SenderThread:28424 [sender.py:send():380] send: exit
+2023-10-17 21:12:19,188 INFO    SenderThread:28424 [sender.py:send_exit():585] handling exit code: 0
+2023-10-17 21:12:19,188 INFO    SenderThread:28424 [sender.py:send_exit():587] handling runtime: 710
+2023-10-17 21:12:19,189 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:12:19,190 INFO    SenderThread:28424 [sender.py:send_exit():593] send defer
+2023-10-17 21:12:19,191 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,191 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 0
+2023-10-17 21:12:19,192 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,192 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-10-17 21:12:19,192 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 1
+2023-10-17 21:12:19,192 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,193 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 1
+2023-10-17 21:12:19,193 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,193 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-10-17 21:12:19,193 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 2
+2023-10-17 21:12:19,193 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,193 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 2
+2023-10-17 21:12:19,193 INFO    HandlerThread:28424 [system_monitor.py:finish():203] Stopping system monitor
+2023-10-17 21:12:19,193 DEBUG   SystemMonitor:28424 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-10-17 21:12:19,194 DEBUG   SystemMonitor:28424 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-10-17 21:12:19,196 INFO    HandlerThread:28424 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-17 21:12:19,196 INFO    HandlerThread:28424 [interfaces.py:finish():202] Joined disk monitor
+2023-10-17 21:12:19,196 INFO    HandlerThread:28424 [interfaces.py:finish():202] Joined memory monitor
+2023-10-17 21:12:19,197 INFO    HandlerThread:28424 [interfaces.py:finish():202] Joined network monitor
+2023-10-17 21:12:19,197 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,197 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-10-17 21:12:19,197 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 3
+2023-10-17 21:12:19,197 DEBUG   SenderThread:28424 [sender.py:send():380] send: stats
+2023-10-17 21:12:19,198 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,198 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 3
+2023-10-17 21:12:19,199 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,199 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-10-17 21:12:19,199 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 4
+2023-10-17 21:12:19,199 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,199 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 4
+2023-10-17 21:12:19,200 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,200 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-10-17 21:12:19,200 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 5
+2023-10-17 21:12:19,208 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,208 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 5
+2023-10-17 21:12:19,209 DEBUG   SenderThread:28424 [sender.py:send():380] send: summary
+2023-10-17 21:12:19,210 INFO    SenderThread:28424 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-17 21:12:19,210 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,211 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-10-17 21:12:19,211 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 6
+2023-10-17 21:12:19,211 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:19,211 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 6
+2023-10-17 21:12:19,212 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:19,212 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-10-17 21:12:19,219 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: status_report
+2023-10-17 21:12:19,255 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:12:19,256 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\media\images\pred_30_d002612df612e3fb6a52.png
+2023-10-17 21:12:19,258 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\media\images
+2023-10-17 21:12:19,259 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_created():271] file/dir created: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\media
+2023-10-17 21:12:20,202 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-17 21:12:20,443 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 7
+2023-10-17 21:12:20,444 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: poll_exit
+2023-10-17 21:12:20,444 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:20,444 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 7
+2023-10-17 21:12:20,445 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:20,445 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-10-17 21:12:21,206 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-17 21:12:21,235 INFO    wandb-upload_0:28424 [upload_job.py:push():131] Uploaded file C:\Users\LIMJAE~1\AppData\Local\Temp\tmpsqpk6dc3wandb\4t9xjfr1-media/images/pred_30_d002612df612e3fb6a52.png
+2023-10-17 21:12:21,288 INFO    Thread-53 :28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\config.yaml
+2023-10-17 21:12:22,247 INFO    wandb-upload_0:28424 [upload_job.py:push():131] Uploaded file C:\Users\LIMJAE~1\AppData\Local\Temp\tmpsqpk6dc3wandb\8qgvu1rl-media/images/pred_30_d002612df612e3fb6a52.png
+2023-10-17 21:12:22,258 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 8
+2023-10-17 21:12:22,258 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: poll_exit
+2023-10-17 21:12:22,259 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:22,259 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 8
+2023-10-17 21:12:22,260 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:22,260 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-10-17 21:12:22,261 INFO    SenderThread:28424 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-17 21:12:22,263 INFO    SenderThread:28424 [job_builder.py:_get_source_type():404] no source found
+2023-10-17 21:12:22,263 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 9
+2023-10-17 21:12:22,263 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:22,263 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 9
+2023-10-17 21:12:22,263 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:22,264 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-10-17 21:12:22,264 INFO    SenderThread:28424 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-17 21:12:22,306 INFO    SenderThread:28424 [dir_watcher.py:_on_file_modified():288] file/dir modified: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:12:22,310 INFO    SenderThread:28424 [dir_watcher.py:finish():388] scan: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files
+2023-10-17 21:12:22,311 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\conda-environment.yaml conda-environment.yaml
+2023-10-17 21:12:22,313 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\config.yaml config.yaml
+2023-10-17 21:12:22,314 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log output.log
+2023-10-17 21:12:22,319 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\requirements.txt requirements.txt
+2023-10-17 21:12:22,326 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-metadata.json wandb-metadata.json
+2023-10-17 21:12:22,327 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json wandb-summary.json
+2023-10-17 21:12:22,341 INFO    SenderThread:28424 [dir_watcher.py:finish():402] scan save: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\media\images\pred_30_d002612df612e3fb6a52.png media/images/pred_30_d002612df612e3fb6a52.png
+2023-10-17 21:12:22,341 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 10
+2023-10-17 21:12:22,342 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:22,342 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 10
+2023-10-17 21:12:22,343 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:22,343 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-10-17 21:12:22,343 INFO    SenderThread:28424 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-17 21:12:22,787 INFO    wandb-upload_0:28424 [upload_job.py:push():131] Uploaded file c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\config.yaml
+2023-10-17 21:12:24,053 INFO    wandb-upload_2:28424 [upload_job.py:push():131] Uploaded file c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\requirements.txt
+2023-10-17 21:12:24,172 INFO    wandb-upload_1:28424 [upload_job.py:push():131] Uploaded file c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\output.log
+2023-10-17 21:12:25,314 INFO    wandb-upload_3:28424 [upload_job.py:push():131] Uploaded file c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\files\wandb-summary.json
+2023-10-17 21:12:25,527 INFO    Thread-52 :28424 [sender.py:transition_state():613] send defer: 11
+2023-10-17 21:12:25,528 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:25,528 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 11
+2023-10-17 21:12:25,529 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:25,529 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-10-17 21:12:25,529 INFO    SenderThread:28424 [file_pusher.py:join():181] waiting for file pusher
+2023-10-17 21:12:25,529 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 12
+2023-10-17 21:12:25,529 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:25,529 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 12
+2023-10-17 21:12:25,530 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:25,530 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-10-17 21:12:25,530 INFO    SenderThread:28424 [file_stream.py:finish():595] file stream finish called
+2023-10-17 21:12:26,234 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-17 21:12:26,388 INFO    SenderThread:28424 [file_stream.py:finish():599] file stream finish is done
+2023-10-17 21:12:26,388 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 13
+2023-10-17 21:12:26,388 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:26,388 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 13
+2023-10-17 21:12:26,389 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:26,389 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-10-17 21:12:26,389 INFO    SenderThread:28424 [sender.py:transition_state():613] send defer: 14
+2023-10-17 21:12:26,390 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: defer
+2023-10-17 21:12:26,390 DEBUG   SenderThread:28424 [sender.py:send():380] send: final
+2023-10-17 21:12:26,391 DEBUG   SenderThread:28424 [sender.py:send():380] send: footer
+2023-10-17 21:12:26,390 INFO    HandlerThread:28424 [handler.py:handle_request_defer():172] handle defer: 14
+2023-10-17 21:12:26,391 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: defer
+2023-10-17 21:12:26,391 INFO    SenderThread:28424 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-10-17 21:12:26,392 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-17 21:12:26,393 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-17 21:12:26,394 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: server_info
+2023-10-17 21:12:26,394 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: poll_exit
+2023-10-17 21:12:26,394 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: get_summary
+2023-10-17 21:12:26,395 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: server_info
+2023-10-17 21:12:26,395 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: sampled_history
+2023-10-17 21:12:26,401 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: job_info
+2023-10-17 21:12:26,596 DEBUG   SenderThread:28424 [sender.py:send_request():407] send_request: job_info
+2023-10-17 21:12:26,597 DEBUG   HandlerThread:28424 [handler.py:handle_request():146] handle_request: shutdown
+2023-10-17 21:12:26,598 INFO    HandlerThread:28424 [handler.py:finish():866] shutting down handler
+2023-10-17 21:12:27,404 INFO    WriterThread:28424 [datastore.py:close():294] close: c:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\VAE\wandb\run-20231017_210026-soati9tq\run-soati9tq.wandb
+2023-10-17 21:12:27,608 INFO    SenderThread:28424 [sender.py:finish():1534] shutting down sender
+2023-10-17 21:12:27,608 INFO    SenderThread:28424 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-17 21:12:27,608 INFO    SenderThread:28424 [file_pusher.py:join():181] waiting for file pusher
