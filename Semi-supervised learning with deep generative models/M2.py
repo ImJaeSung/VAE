@@ -1,0 +1,199 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+"""q(y|x;phi) = Cat(y|pi(x))"""
+class Classifier(nn.Module):
+    def __init__(self,
+                 input_size, 
+                 hidden_size : list,
+                 label_size):
+        
+        super(Classifier, self).__init__()
+        self.layers = nn.ModuleList()
+        prev_h = input_size
+        for h in hidden_size:
+            self.layers.append(nn.Linear(prev_h, h))
+            prev_h = h
+        self.output_layer = nn.Linear(prev_h, label_size)
+
+    def forward(self, x):
+        for layer in self.layers:
+            x = F.softplus(layer(x))
+        x = self.output_layer(x)
+        return F.softmax(x)
+
+
+"""q(z|x,y:phi)"""
+class M2Encoder(nn.Module):
+    def __init__(self,
+                 input_size,
+                 hidden_size : list,
+                 latent_size):
+        
+        super(M2Encoder, self).__init__()
+        self.layers = nn.ModuleList()
+        prev_h = input_size
+        for h in hidden_size:
+            self.layers.append(nn.Linear(prev_h, h))
+            prev_h = h
+        self.mu_layer = nn.Linear(prev_h, latent_size)
+        self.logvar_layer = nn.Linear(prev_h, latent_size)
+
+    def forward(self, xy):
+        for layer in self.layers:
+            xy = F.softplus(layer(xy))
+        mu = self.mu_layer(xy)
+        logvar = F.softplus(self.logvar_layer(xy)) ####
+        return mu, logvar
+
+
+"""p(x|y,z;theta)"""
+class M2Decoder(nn.Module):
+    def __init__(self,
+                 latent_size,
+                 hidden_size : list,
+                 output_size):
+        
+        super(M2Decoder, self).__init__()
+        self.layers = nn.ModuleList()
+        prev_h = latent_size
+        for h in hidden_size:
+            self.layers.append(nn.Linear(prev_h, h))
+            prev_h = h
+        self.reconstruction_layer = nn.Linear(prev_h, output_size)
+
+    def forward(self, zy):
+        for layer in self.layers:
+            zy = F.softplus(layer(zy))
+        reconstruction = torch.sigmoid(self.reconstruction_layer(zy))
+        return reconstruction
+
+class M2model(nn.Module):
+    def __init__(self,
+                 input_size,
+                 label_size,
+                 hidden_size_px : list,
+                 hidden_size_qz : list,
+                 hidden_size_py : list,
+                 latent_size):
+        
+        super(M2model, self).__init__()
+        
+        # q(y|x;phi)
+        self.classifier = Classifier(input_size,
+                                     hidden_size_py,
+                                     label_size)
+        # q(z|x,y;phi)
+        self.M1Encoder = M2Encoder(input_size + label_size,  
+                                   hidden_size_qz,
+                                   latent_size)
+        # p(x|y,z;theta)
+        self.M2Decoder = M2Decoder(latent_size + label_size, 
+                                   hidden_size_px, 
+                                   input_size)
+
+    def forward(self, x, y):
+        if y is not None:
+            y_hat_l = self.classifier(x) # classification loss term 계산에 이용
+            y_hat_ul = None
+            
+            y = F.one_hot(y, num_classes = 10).float() # 차원 수 맞추기 위해 one-hot encoding 
+            # y_hat = F.softmax(y_hat, dim = 1)
+        else:
+            y_hat_ul = self.classifier(x) # q(y|x;phi) 64x10
+            y_hat_l = None
+            
+            y = self._enumerate_discrete(x, 10) # 640x10
+            x = x.repeat(10, 1) # 640x784
+            
+            # y = F.softmax(y_logits, dim = 1)
+            # y = torch.argmax(y, dim = 1, keepdim = True)
+            
+        xy = torch.cat([x, y], dim = 1)   # dim_x(mnist = 784) + dim_y (mnist = 10)
+        z_mu, z_logvar = self.M1Encoder(xy) # mu;z|x,y sigma;z|x,y
+
+        z = self._reparameterize(z_mu, z_logvar) # z에 대해 reparmeter
+        zy = torch.cat([z, y], dim = 1) # dim_z + dim_y(mnist = 10)
+        
+        x_recon = self.M2Decoder(zy) # p(x|y,z;theta)   
+        
+        return x_recon, z_mu, z_logvar, y_hat_l, y_hat_ul, y
+    
+    def _enumerate_discrete(self, x, y_dim):
+        def batch(batch_size, label):
+            labels = (torch.ones(batch_size, 1) * label).type(torch.LongTensor)
+            y = torch.zeros((batch_size, y_dim))
+            y.scatter_(1, labels, 1)
+            return y.type(torch.LongTensor)
+
+        batch_size = x.size(0)
+        generated = torch.cat([batch(batch_size, i) for i in range(y_dim)])
+
+        if x.is_cuda:
+            generated = generated.cuda()
+
+        return generated.float()
+    
+    
+    def _reparameterize(self, mu, logvar):
+        std = torch.exp(0.5 * logvar)
+        eps = torch.randn_like(std)
+        return mu + eps * std
+    
+    # p(y)
+    def _prior(self, y): 
+        prior = F.softmax(torch.ones_like(y), dim = 1) # batchx10
+        prior.requires_grad = False
+
+        Prior = -nn.CrossEntropyLoss(reduction = 'none')(torch.log(prior), y)
+        Prior = torch.sum(Prior, dim = -1)
+
+        return Prior   
+
+    def _loss_function(self, 
+                       x_recon, 
+                       x, 
+                       mu, 
+                       logvar, 
+                       y_hat_l,
+                       y_hat_ul, 
+                       y, 
+                       alpha = 0.1):
+        
+        BCE = nn.BCELoss(reduction = 'none')(x_recon, x) # 64x784 / 640x784
+        BCE = torch.sum(BCE, dim = -1) # 64x784 / 640x784 -> 64 / 640
+
+        KLD = -0.5 * (1 + logvar - mu.pow(2) - logvar.exp())
+        KLD = torch.sum(KLD, dim = -1) # 64x50 / 640x50 -> 64 / 640 
+
+        Prior = -self._prior(y) # 64x1 / 640
+        
+        L = BCE + KLD + Prior # 64x1 / 640
+
+        if y_hat_l is not None:
+            # L = torch.sum(L)
+            # CE = nn.CrossEntropyLoss(reduction = 'sum')(y_hat_l, y) # E(-log q(y|x);p(x,y)) : classification loss term
+            
+            L = torch.mean(L)
+            CE = nn.CrossEntropyLoss(reduction = 'mean')(y_hat_l, y)
+
+            loss = L + alpha*CE  # J + alpha*E(-log q(y|x);p(x,y))
+
+        elif y_hat_ul is not None:
+
+            H = torch.mul(y_hat_ul, torch.log(y_hat_ul)) # 64x10
+
+            L = L.view_as(y_hat_ul.t()) # 640 -> 10x64
+            L = L.t() # 10x64 -> 64x10
+
+            LH = L + H # 64x10
+
+            U = torch.mul(y_hat_ul, LH) # 64x 10
+            # U = torch.sum(U)  # 1
+            U = torch.sum(U, dim = -1) # 64
+            U = torch.mean(U) # 1 
+            loss = U 
+
+        return loss
+#%%

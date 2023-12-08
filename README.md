@@ -16,3 +16,5 @@ $$\begin{aligned}
 &=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)]-D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z))+D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))\\
 &=L(\theta, \phi : x^{(i)}) + D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))
 \end{aligned}$$
+
+## Semi-supervised Learning with Deep Generative models
