@@ -9,7 +9,6 @@
 
 $$\begin{aligned} 
 \log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)] \\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \frac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg]
-\end{aligned}$$
+&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}
 
 ## Semi-supervised Learning with Deep Generative models
