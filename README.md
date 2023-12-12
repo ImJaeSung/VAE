@@ -9,7 +9,7 @@
 
 $$\begin{aligned} 
 \log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)] \\
-&=\mathcal{L}(\theta, \phi ; \mathbf{x}) + D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta))
+&= 122
 \end{aligned}$$
 
 ## Semi-supervised Learning with Deep Generative models
