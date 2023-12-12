@@ -8,7 +8,7 @@
 - Lower Bound (ELBO)
 
 $$\begin{aligned} 
-\log p(\mathbf{x};\theta)
+\log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)]
 \end{aligned}$$
 
 ## Semi-supervised Learning with Deep Generative models
