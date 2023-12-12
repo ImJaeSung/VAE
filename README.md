@@ -8,13 +8,14 @@
 - Lower Bound (ELBO)
 
 $$\begin{aligned} 
-\log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)] \\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \frac{p(\mathbf{x}|\mathbf{z};\theta) p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \frac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)} \frac{q(\mathbf{z}|\mathbf{x};\phi)}{q(\mathbf{z}|\mathbf{x};\phi)}\bigg]\\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)] - \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \frac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}\bigg]+\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \frac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-\int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\log \frac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}dz + \int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\frac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}dz \\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}))+D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta)) \\
-&=\mathcal{L}(\theta, \phi ; \mathbf{x}) + D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta))
+\log p_{\theta}(x^{(i)})&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)})] \\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})}\bigg] \\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{p_{\theta}(x^{(i)}|z)p_{\theta}(z)}{p_{\theta}(z|x^{(i)})} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\bigg] \\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)] - E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\cfrac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}\bigg]+E_{z \sim q_{\phi}(z|x^{(i)})}\bigg[\log\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}\bigg] \\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)]-\int_{z} q_{\phi}(z|x^{(i)})log \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)}dz + \int_{z} q_{\phi}(z|x^{(i)})\frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})}dz\\
+&=E_{z \sim q_{\phi}(z|x^{(i)})}[\log p_{\theta}(x^{(i)}|z)]-D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z))+D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))\\
+&=L(\theta, \phi : x^{(i)}) + D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z|x^{(i)}))
 \end{aligned}$$
+
 
 ## Semi-supervised Learning with Deep Generative models
