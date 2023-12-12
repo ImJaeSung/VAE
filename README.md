@@ -8,8 +8,8 @@
 - Lower Bound (ELBO)
 
 $$\begin{aligned} 
-\log p(\mathbf{x};\theta)&=&\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)] \nonumber \\
-&=&\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \nonumber \\
+\log p(\mathbf{x};\theta) &= \mathbb{E}_ {q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)]\\
+&=&\mathbb{E}_ {q(\mathbf{z}|\mathbf{x};\phi)} \bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \nonumber \\
 &=&\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\ \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{q(\mathbf{z}|\mathbf{x};\phi)}\bigg] \nonumber \\
 &=&\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)] - \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}\bigg]+\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \nonumber \\
 &=&\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-\int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}dz + \int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}dz \nonumber\\
