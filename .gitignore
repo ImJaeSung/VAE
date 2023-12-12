@@ -1,0 +1,6 @@
+*.zip
+.DS_Store
+embedded_data
+.streamlit
+__pycache__
+log
