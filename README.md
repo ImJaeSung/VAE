@@ -8,8 +8,7 @@
 - Lower Bound (ELBO)
 
 $$\begin{aligned} 
-\log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)]\\
-&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)} \bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg]
+\log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)]
 \end{aligned}$$
 
 ## Semi-supervised Learning with Deep Generative models
