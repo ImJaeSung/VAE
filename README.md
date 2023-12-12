@@ -9,12 +9,12 @@
 
 $$\begin{aligned} 
 \log p(\mathbf{x};\theta)&=\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x};\theta)]\\
-&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \nonumber \\
-&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\ \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{q(\mathbf{z}|\mathbf{x};\phi)}\bigg] \nonumber \\
+&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg]\\
+&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{p(\mathbf{x}|\mathbf{z};\theta)p(\mathbf{z})}{p(\mathbf{z}|\mathbf{x};\theta)}\ \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{q(\mathbf{z}|\mathbf{x};\phi)}\bigg]\\
 &= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)] - \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}\bigg]+\mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}\bigg[\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}\bigg] \nonumber \\
-&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-\int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}dz + \int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}dz \nonumber\\
-&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}))+D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta))\nonumber \\
-&= \mathcal{L}(\theta, \phi ; \mathbf{x}) + D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta)) \nonumber
+&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-\int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\log \cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z})}dz + \int_{\mathbf{z}} q(\mathbf{z}|\mathbf{x};\phi)\cfrac{q(\mathbf{z}|\mathbf{x};\phi)}{p(\mathbf{z}|\mathbf{x};\theta)}dz\\
+&= \mathbb{E}_{q(\mathbf{z}|\mathbf{x};\phi)}[\log p(\mathbf{x}|\mathbf{z};\theta)]-D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}))+D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta))\\
+&= \mathcal{L}(\theta, \phi ; \mathbf{x}) + D_{\mathcal{KL}}(q(\mathbf{z}|\mathbf{x};\phi)||p(\mathbf{z}|\mathbf{x};\theta))
 \end{aligned}$$
 
 ## Semi-supervised Learning with Deep Generative models
