@@ -19,6 +19,5 @@ $$\begin{aligned}
 
 
 ## Semi-supervised Learning with Deep Generative models
-<p align="center">
-  <img src="C:\Users\LimJaeSung\OneDrive - UOS\바탕 화면\인턴 공부\Semi-supervised learning with deep generative models\imgs\analogy_image.png">
-</p>
+[image](https://github.com/ImJaeSung/VAE/assets/113405066/5d8e9792-6ba3-40a0-9744-7e3f0c29083c)
+
