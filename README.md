@@ -19,4 +19,4 @@ $$\begin{aligned}
 
 
 ## Semi-supervised Learning with Deep Generative models
-<img src = "https://github.com/ImJaeSung/VAE/assets/113405066/5d8e9792-6ba3-40a0-9744-7e3f0c29083c" width = "20" height = "20" )
+<img src = "https://github.com/ImJaeSung/VAE/assets/113405066/5d8e9792-6ba3-40a0-9744-7e3f0c29083c" width = "20" height = "20">
