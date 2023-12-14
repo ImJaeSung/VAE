@@ -71,17 +71,13 @@ class M2Decoder(nn.Module):
 
 class M2model(nn.Module):
     def __init__(self,
-                 input_size,
-                 label_size,
-                 hidden_size_px : list,
-                 hidden_size_qz : list,
-                 hidden_size_py : list,
-                 latent_size):
+                 classifier_input_size, hidden_size_py : list, label_size,
+                 input_size, hidden_size_qz : list, latent_size, hidden_size_px : list, output_size):
         
         super(M2model, self).__init__()
         
         # q(y|x;phi)
-        self.classifier = Classifier(input_size,
+        self.classifier = Classifier(classifier_input_size,
                                      hidden_size_py,
                                      label_size)
         # q(z|x,y;phi)
@@ -91,7 +87,7 @@ class M2model(nn.Module):
         # p(x|y,z;theta)
         self.M2Decoder = M2Decoder(latent_size + label_size, 
                                    hidden_size_px, 
-                                   input_size)
+                                   output_size)
         
         self.apply(self._init_weights)
     
@@ -110,23 +106,17 @@ class M2model(nn.Module):
         if isinstance(module, nn.Linear):
             nn.init.normal_(module.weight, mean = 0.0, std = 0.001)
             nn.init.constant_(module.bias, 0)
-
         
-    def _enumerate_discrete(self, x, y_dim):
-        def batch(batch_size, label):
-            labels = (torch.ones(batch_size, 1) * label).type(torch.LongTensor)
-            y = torch.zeros((batch_size, y_dim))
-            y.scatter_(1, labels, 1)
-            return y.type(torch.LongTensor)
-
+    def _expand_y(self, x, y_dim):
         batch_size = x.size(0)
-        generated = torch.cat([batch(batch_size, i) for i in range(y_dim)])
+        y = torch.zeros(batch_size * y_dim, y_dim)
+        for i in range(y_dim):
+            y[i * batch_size:(i + 1) * batch_size, i] = 1
 
         if x.is_cuda:
-            generated = generated.cuda()
+            y = y.cuda()
 
-        return generated.float()
-    
+        return y.float()
     
     def _reparameterize(self, z_mu, z_logvar):
         std = torch.exp(0.5 * z_logvar)

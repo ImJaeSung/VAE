@@ -1,11 +1,8 @@
-from torchvision.datasets import MNIST
-import torch
 from torchvision import datasets, transforms
-import torch.nn.functional as F
-from torch.utils.data import DataLoader, Subset
+from torch.utils.data import Subset
 import numpy as np
 
-def load_mnist_data(binarize_y = False):
+def load_mnist_data():
     transform = transforms.Compose([
         transforms.ToTensor(),
     ])
