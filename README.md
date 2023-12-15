@@ -19,8 +19,13 @@ $$\begin{aligned}
 
 
 ## Semi-supervised Learning with Deep Generative models
+- 생성 모델을 이용한 Semi-supervised Learning Framework 제안
+- Variance inference가 Semi-supervised Learning에 적용되는 방법을 보여줌
+- Latent variable을 통 생성 모델이 다양한 이미지를 생성할 수 있음을 보여줌\
+
 <img src = "https://github.com/ImJaeSung/VAE/assets/113405066/5d8e9792-6ba3-40a0-9744-7e3f0c29083c" width = "400" height = "400">
 <img src = "https://github.com/ImJaeSung/VAE/assets/113405066/f9bfaff5-42a0-4950-8c2d-bc4a3abb260b" width = "400" height = "400">
 
-- M2 classifier accuracy : 93.18%
-- M1+M2 classifier accuracy : ing
+- #label : 3000
+- M2 classifier accuracy : 96.9%
+- M1+M2 classifier accuracy : 96.55%
