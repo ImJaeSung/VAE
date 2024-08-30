@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-08-30T14:36:23.250536",
+    "startedAt": "2024-08-30T14:36:22.551907",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\inference.py",
+    "codePathLocal": "inference.py",
+    "codePath": "convVAE\\inference.py",
+    "git": {
+        "remote": "https://github.com/ImJaeSung/VAE.git",
+        "commit": "bfbff30fa0ab0e0003c4644ff2df5d6effc0b7e9"
+    },
+    "email": null,
+    "root": "C:/Users/LimJaesung/Documents/Git/VAE",
+    "host": "DESKTOP-5J5VKKC",
+    "username": "LimJaesung",
+    "executable": "c:\\Users\\LimJaesung\\anaconda3\\envs\\impute\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 3000.0,
+        "min": 0.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3000.0,
+            "min": 0.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 237.79767227172852,
+            "used": 164.5715560913086
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1050",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.915508270263672
+    }
+}

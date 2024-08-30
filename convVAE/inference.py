@@ -5,7 +5,7 @@ import argparse
 import importlib
 
 import torch
-from torch.utils.data import DataLoader
+import matplotlib.pyplot as plt
 from modules.utils import set_random_seed
 #%%
 import sys
@@ -111,8 +111,17 @@ def main():
     wandb.log({"Number of Parameters": model_params /1000000})
     #%%
     """generation"""
-    figure = model.generate(test_dataset, device)
-    wandb.log({"figure" : figure})
+    ax = model.generate(test_dataset, device)
+    #%%
+    """image save"""
+    base_name = f"{config['dataset']}_{config['latent_dim']}"
+    figure_dir = f"./assets/figures/{base_name}"
+    if not os.path.exists(figure_dir):
+        os.makedirs(figure_dir)
+    figure_name = f"convVAE_{base_name}_{config['seed']}"
+
+    ax.figure.savefig(f"./{figure_dir}/{figure_name}.png")
+    wandb.log({"figure" : ax})
     #%%
     wandb.config.update(config, allow_val_change=True)
     wandb.run.finish()
