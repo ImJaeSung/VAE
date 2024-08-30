@@ -1,3 +1,5 @@
+assets
+data
 *.zip
 .DS_Store
 embedded_data
