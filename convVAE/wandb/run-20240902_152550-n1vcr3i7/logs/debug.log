@@ -1,0 +1,26 @@
+2024-09-02 15:25:50,705 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-02 15:25:50,705 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Configure stats pid to 21412
+2024-09-02 15:25:50,706 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Loading settings from C:\Users\LimJaesung\.config\wandb\settings
+2024-09-02 15:25:50,706 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Loading settings from C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\settings
+2024-09-02 15:25:50,706 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-02 15:25:50,706 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'convVAE\\main.py', 'program_abspath': 'C:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\main.py', 'program': 'C:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\main.py'}
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_init.py:_log_setup():524] Logging user logs to C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\run-20240902_152550-n1vcr3i7\logs\debug.log
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_init.py:_log_setup():525] Logging internal logs to C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\run-20240902_152550-n1vcr3i7\logs\debug-internal.log
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_init.py:init():607] calling init triggers
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {}
+2024-09-02 15:25:50,708 INFO    MainThread:21412 [wandb_init.py:init():657] starting backend
+2024-09-02 15:25:50,709 INFO    MainThread:21412 [wandb_init.py:init():661] setting up manager
+2024-09-02 15:25:50,713 INFO    MainThread:21412 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-09-02 15:25:50,715 INFO    MainThread:21412 [wandb_init.py:init():669] backend started and connected
+2024-09-02 15:25:50,724 INFO    MainThread:21412 [wandb_init.py:init():767] updated telemetry
+2024-09-02 15:25:50,774 INFO    MainThread:21412 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-09-02 15:25:52,548 INFO    MainThread:21412 [wandb_init.py:init():851] starting run threads in backend
+2024-09-02 15:25:52,874 INFO    MainThread:21412 [wandb_run.py:_console_start():2463] atexit reg
+2024-09-02 15:25:52,874 INFO    MainThread:21412 [wandb_run.py:_redirect():2309] redirect: wrap_raw
+2024-09-02 15:25:52,874 INFO    MainThread:21412 [wandb_run.py:_redirect():2374] Wrapping output streams.
+2024-09-02 15:25:52,874 INFO    MainThread:21412 [wandb_run.py:_redirect():2399] Redirects installed.
+2024-09-02 15:25:52,882 INFO    MainThread:21412 [wandb_init.py:init():894] run started, returning control to user process
+2024-09-02 15:25:52,909 INFO    MainThread:21412 [wandb_run.py:_config_callback():1392] config_cb None None {'seed': 0, 'dataset': 'MNIST', 'hidden_dim': [32, 64, 128], 'latent_dim': 128, 'batch_size': 64, 'lr': 0.005, 'weight_decay': 0.0, 'scheduler_gamma': 0.95, 'kld_weight': 0.00025, 'epochs': 100}

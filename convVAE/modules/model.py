@@ -25,11 +25,13 @@ class convVAE(nn.Module):
         for h in config["hidden_dim"]:
             en.append(
                 nn.Sequential(
-                    nn.Conv2d(in_channels = in_dim,
-                              out_channels = h,
-                              kernel_size = 3,
-                              stride = 2,
-                              padding = 1),
+                    nn.Conv2d(
+                        in_channels=in_dim,
+                        out_channels=h,
+                        kernel_size=3,
+                        stride=2,
+                        padding=1
+                    ),
                     nn.BatchNorm2d(h),
                     nn.LeakyReLU()
                 )
@@ -55,11 +57,11 @@ class convVAE(nn.Module):
             de.append(
                 nn.Sequential(
                     nn.ConvTranspose2d(
-                        in_channels = in_dim,
-                        out_channels = h,
-                        kernel_size = 3,
-                        stride = 2,
-                        padding = 1,
+                        in_channels=in_dim,
+                        out_channels=h,
+                        kernel_size=3,
+                        stride=2,
+                        padding=1,
                         output_padding= outpad    
                     ),
                     nn.BatchNorm2d(h),

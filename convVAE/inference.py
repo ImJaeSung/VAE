@@ -59,7 +59,7 @@ def get_args(debug=False):
 #%%
 def main():
     #%%
-    config = vars(get_args(debug=True))
+    config = vars(get_args(debug=False))
     #%%
     """model load"""
     base_name = f"{config['dataset']}_{config['latent_dim']}" 

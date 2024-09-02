@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-09-02T07:02:15.847667",
+    "startedAt": "2024-09-02T07:02:15.124895",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "convVAE\\main.py",
+    "git": {
+        "remote": "https://github.com/ImJaeSung/VAE.git",
+        "commit": "f1aa7205610e135d68d576a1026ad8fb607f883d"
+    },
+    "email": null,
+    "root": "C:/Users/LimJaesung/Documents/Git/VAE",
+    "host": "DESKTOP-5J5VKKC",
+    "username": "LimJaesung",
+    "executable": "C:\\Users\\LimJaesung\\anaconda3\\envs\\impute\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 6,
+    "cpu_freq": {
+        "current": 3000.0,
+        "min": 0.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3000.0,
+            "min": 0.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 237.79767227172852,
+            "used": 164.9908676147461
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1050",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.915508270263672
+    }
+}

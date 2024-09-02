@@ -7,9 +7,6 @@ from collections import namedtuple
 EncodedInfo = namedtuple(
     'EncodedInfo', 
     ['channels', 'height', 'width'])
-
-#%%
-
 #%%
 class CustomMNIST(Dataset):
     def __init__(self, train=True):

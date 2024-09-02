@@ -1,0 +1,36 @@
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Configure stats pid to 3896
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Loading settings from C:\Users\LimJaesung\.config\wandb\settings
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Loading settings from C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\settings
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-02 17:01:24,100 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-02 17:01:24,102 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'convVAE\\inference.py', 'program_abspath': 'C:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\inference.py', 'program': 'C:\\Users\\LimJaesung\\Documents\\Git\\VAE\\convVAE\\inference.py'}
+2024-09-02 17:01:24,102 INFO    MainThread:3896 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:_log_setup():524] Logging user logs to C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\run-20240902_170124-z8bv2an4\logs\debug.log
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:_log_setup():525] Logging internal logs to C:\Users\LimJaesung\Documents\Git\VAE\convVAE\wandb\run-20240902_170124-z8bv2an4\logs\debug-internal.log
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:init():607] calling init triggers
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {}
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:init():657] starting backend
+2024-09-02 17:01:24,103 INFO    MainThread:3896 [wandb_init.py:init():661] setting up manager
+2024-09-02 17:01:24,110 INFO    MainThread:3896 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-09-02 17:01:24,113 INFO    MainThread:3896 [wandb_init.py:init():669] backend started and connected
+2024-09-02 17:01:24,118 INFO    MainThread:3896 [wandb_init.py:init():767] updated telemetry
+2024-09-02 17:01:24,242 INFO    MainThread:3896 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-09-02 17:01:24,766 INFO    MainThread:3896 [wandb_init.py:init():851] starting run threads in backend
+2024-09-02 17:01:25,090 INFO    MainThread:3896 [wandb_run.py:_console_start():2463] atexit reg
+2024-09-02 17:01:25,090 INFO    MainThread:3896 [wandb_run.py:_redirect():2309] redirect: wrap_raw
+2024-09-02 17:01:25,090 INFO    MainThread:3896 [wandb_run.py:_redirect():2374] Wrapping output streams.
+2024-09-02 17:01:25,090 INFO    MainThread:3896 [wandb_run.py:_redirect():2399] Redirects installed.
+2024-09-02 17:01:25,094 INFO    MainThread:3896 [wandb_init.py:init():894] run started, returning control to user process
+2024-09-02 17:01:26,959 INFO    MainThread:3896 [wandb_run.py:_config_callback():1392] config_cb None None {'ver': 1, 'dataset': 'MNIST', 'latent_dim': 128, 'lr': 0.005, 'seed': 0, 'epochs': 100, 'batch_size': 64, 'hidden_dim': [32, 64, 128], 'kld_weight': 0.00025, 'weight_decay': 0.0, 'scheduler_gamma': 0.95, 'cuda': True}
+2024-09-02 17:01:30,585 INFO    MainThread:3896 [wandb_run.py:_config_callback():1392] config_cb None None {'ver': 1, 'dataset': 'MNIST', 'latent_dim': 128, 'lr': 0.005, 'seed': 0, 'epochs': 100, 'batch_size': 64, 'hidden_dim': [32, 64, 128], 'kld_weight': 0.00025, 'weight_decay': 0.0, 'scheduler_gamma': 0.95, 'cuda': True}
+2024-09-02 17:01:30,585 INFO    MainThread:3896 [wandb_run.py:_finish():2160] finishing run uos_stat/convVAE/z8bv2an4
+2024-09-02 17:01:30,585 INFO    MainThread:3896 [wandb_run.py:_atexit_cleanup():2424] got exitcode: 0
+2024-09-02 17:01:30,586 INFO    MainThread:3896 [wandb_run.py:_restore():2406] restore
+2024-09-02 17:01:30,586 INFO    MainThread:3896 [wandb_run.py:_restore():2412] restore done
+2024-09-02 17:01:30,587 INFO    MainThread:3896 [wandb_run.py:_on_finish():2677] communicating current version
+2024-09-02 17:01:30,613 INFO    MainThread:3896 [wandb_run.py:_on_finish():2686] got version response 
+2024-09-02 17:01:38,031 INFO    MainThread:3896 [wandb_run.py:_footer_history_summary_info():4078] rendering history
+2024-09-02 17:01:38,031 INFO    MainThread:3896 [wandb_run.py:_footer_history_summary_info():4110] rendering summary
+2024-09-02 17:01:38,059 INFO    MainThread:3896 [wandb_run.py:_footer_sync_info():4037] logging synced files

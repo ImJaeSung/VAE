@@ -15,7 +15,7 @@ def train_function(
 
     for epoch in range(config['epochs']):
         logs = {
-            'mse_loss': [],
+            'bce_loss': [],
             'kl_loss': [],
             'loss': [],
         }
@@ -26,13 +26,14 @@ def train_function(
             batch = batch.to(device)
 
             recon, mu, logvar = model(batch)
-            mse_loss = F.mse_loss(recon, batch)
+            bce_loss = F.binary_cross_entropy(recon, batch, reduction='sum')
             kl_loss = torch.mean(
-                -0.5 * torch.sum(1 + logvar - mu ** 2 - logvar.exp(), dim = 1), dim = 0
+                -0.5 * torch.sum(1 + logvar - mu**2 - logvar.exp(), dim=1), 
+                dim=0
             )
-            loss = mse_loss + kl_loss
+            loss = bce_loss + kl_loss
         
-            loss_.append(('mse_loss', mse_loss))
+            loss_.append(('bce_loss', bce_loss))
             loss_.append(('kl_loss', kl_loss))
             loss_.append(('loss', loss))
             
